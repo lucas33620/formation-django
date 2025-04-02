@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.defaults import server_error
+from DocBlog.views import index
 
 urlpatterns = [
+    path('', index, name = "homepage"),
     path('admin/', admin.site.urls),
+    # path('bonjour/', server_error) # On créer un lien qui va lancer la fonction server_error (Functiun view)
 ]
+
