@@ -3,7 +3,7 @@ from datetime import datetime
 
 def index(request):
     date = datetime.today()
-    return render(request, "index.html", context = 
+    return render(request, "DocBlog/index.html", context = 
                   {"prenom" : "patrick",
                    "date" : date
                    })
